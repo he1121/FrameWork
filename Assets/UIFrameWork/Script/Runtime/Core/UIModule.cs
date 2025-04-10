@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UIModule
 {
-    private UIModule _instance;
+    private static UIModule _instance;
 
-    private UIModule Instance
+    public static UIModule Instance
     {
         get
         {
@@ -30,6 +30,11 @@ public class UIModule
         mUIRoot = GameObject.Find("UIRoot").transform;
     }
 
+    /// <summary>
+    /// 弹出一个弹窗
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     public T PopUpWindow<T>() where T: WindowBase, new()
     {
         System.Type type = typeof(T);
@@ -44,23 +49,37 @@ public class UIModule
         return InitalizeWindow(t, wndName) as T;
     }
 
-    public WindowBase InitalizeWindow(WindowBase windowBase, string wndName)
+    private WindowBase InitalizeWindow(WindowBase windowBase, string wndName)
     {
         //1.生成窗口预制体
         GameObject newWindow = TempLoadWindow(wndName);
         //2.初始化对应管理类
-        windowBase.gameobject = newWindow;
-        windowBase.transform = newWindow.transform;
-        windowBase.Canvas = newWindow.GetComponent<Canvas>();
-        windowBase.Canvas.worldCamera = mUICamera;
-        windowBase.transform.SetAsLastSibling();
+        if (newWindow != null)
+        {
+            windowBase.Name = newWindow.name;
+            windowBase.gameobject = newWindow;
+            windowBase.transform = newWindow.transform;
+            windowBase.Canvas = newWindow.GetComponent<Canvas>();
+            windowBase.Canvas.worldCamera = mUICamera;
+            windowBase.transform.SetAsLastSibling();
         
-        windowBase.OnAwake();
-        windowBase.SetVisible(true);
-        windowBase.OnShow();
+            windowBase.OnAwake();
+            windowBase.SetVisible(true);
+            windowBase.OnShow();
 
-        RectTransform rectTransform = newWindow.GetComponent<RectTransform>();
+            RectTransform rectTransform = newWindow.GetComponent<RectTransform>();
+            rectTransform.anchorMax = Vector2.one;
+            rectTransform.offsetMax = Vector2.zero;
+            rectTransform.offsetMin = Vector2.zero;
         
+            mAllWindowDisc.Add(wndName, windowBase);
+            mAllWindowList.Add(windowBase);
+            mAllVisibleWindowList.Add(windowBase);
+            return windowBase;
+        }
+    
+        Debug.LogError("没有加载窗口 "+wndName);
+        return null;
     }
     private WindowBase ShowWindow(string wndName)
     {
@@ -85,7 +104,7 @@ public class UIModule
         return null;
     }
 
-    public WindowBase GetWindow(string wndName)
+    private WindowBase GetWindow(string wndName)
     {
         if (mAllWindowDisc.ContainsKey(wndName))
         {
@@ -94,9 +113,54 @@ public class UIModule
         return null;
     }
 
+    /// <summary>
+    /// 获取已经弹出的弹窗
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public T GetWindow<T>() where T : WindowBase
+    {
+        System.Type type = typeof(T);
+        foreach (var wnd in mAllVisibleWindowList)
+        {
+            if (wnd.Name == type.Name)
+            {
+                return (T)wnd;
+            }
+        }
+        Debug.LogError("未获取到窗口 "+type.Name);
+        return null;
+    }
+
+    private void HideWindow(string wndName)
+    {
+        WindowBase window = GetWindow(wndName);
+        HideWindow(window);
+    }
+
+    private void HideWindow(WindowBase window)
+    {
+        if (window != null && window.Visible)
+        {
+            mAllVisibleWindowList.Remove(window);
+            window.SetVisible(false);
+            window.OnHide();
+        }
+    }
+
+    /// <summary>
+    /// 隐藏弹窗
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public void HideWindow<T>() where T : WindowBase
+    {
+        HideWindow(typeof(T).Name);
+    }
+
     public GameObject TempLoadWindow(string wndName)
     {
         GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Window/" + wndName));
+        obj.name = wndName;
         obj.transform.SetParent(mUIRoot);
         obj.transform.localScale = Vector3.one;
         obj.transform.position = Vector3.zero;

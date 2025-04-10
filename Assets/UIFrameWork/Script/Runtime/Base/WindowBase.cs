@@ -47,6 +47,7 @@ public class WindowBase : WindowBehaviour
     {
         base.SetVisible(isVisible);
         gameobject.SetActive(isVisible); //临时代码
+        Visible = isVisible;
     }
 
     #endregion
