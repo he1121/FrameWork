@@ -157,6 +157,49 @@ public class UIModule
         HideWindow(typeof(T).Name);
     }
 
+    private void DestroyWindow(string wndName)
+    {
+        WindowBase window = GetWindow(wndName);
+        DestroyWindow(window);
+    }
+
+    private void DestroyWindow(WindowBase window)
+    {
+        if (window != null)
+        {
+            if (mAllWindowDisc.ContainsKey(window.Name))
+            {
+                mAllWindowDisc.Remove(window.Name);
+                mAllWindowList.Remove(window);
+                mAllVisibleWindowList.Remove(window);
+                
+                window.SetVisible(false);
+                window.OnHide();
+                window.OnDestroy();
+                GameObject.Destroy(window.gameobject.gameObject);
+            }
+        }
+    }
+
+    public void DestroyWindow<T>() where T : WindowBase
+    {
+        DestroyWindow(typeof(T).Name);
+    }
+
+    public void DestrouAllWindow(List<string> filterList =null)
+    {
+        for (int i = mAllWindowList.Count - 1; i >= 0; i--)
+        {
+            WindowBase window = mAllWindowList[i];
+            if (window == null || (filterList != null && filterList.Contains(window.Name)))
+            {
+                continue;
+            }
+            DestroyWindow(window.Name);
+            Resources.UnloadUnusedAssets();
+        }
+    }
+
     public GameObject TempLoadWindow(string wndName)
     {
         GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Window/" + wndName));

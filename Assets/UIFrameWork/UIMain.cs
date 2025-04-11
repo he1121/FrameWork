@@ -23,7 +23,12 @@ public class UIMain : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            UIModule.Instance.HideWindow<LoginWindow>();
+            UIModule.Instance.DestrouAllWindow();
+        } 
+        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            UIModule.Instance.DestrouAllWindow(new List<string>{"LoginWindow"});
         } 
     }
 }
