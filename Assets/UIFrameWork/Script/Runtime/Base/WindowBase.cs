@@ -9,11 +9,23 @@ public class WindowBase : WindowBehaviour
     private List<Button> mAllButtonList = new List<Button>(); //所有button列表
     private List<Toggle> mAllToggleList = new List<Toggle>(); //所有toggle列表
     private List<InputField> mAllInputFieldList = new List<InputField>(); //所有输入框列表
-    
+
+    private CanvasGroup mUIMask;
+    protected Transform mUIContent;
+
+    /// <summary>
+    /// 初始化基类组件
+    /// </summary>
+    private void InitalizeBaseComponent()
+    {
+        mUIMask = transform.Find("UIMask").GetComponent<CanvasGroup>();
+        mUIContent = transform.Find("UIContent").transform;
+    }
     #region 生命周期函数
     public override void OnAwake()
     {
         base.OnAwake();
+        InitalizeBaseComponent();
     }
 
     public override void OnShow()
@@ -48,6 +60,16 @@ public class WindowBase : WindowBehaviour
         base.SetVisible(isVisible);
         gameobject.SetActive(isVisible); //临时代码
         Visible = isVisible;
+    }
+
+    public void SetMaskVisible(bool isVisible)
+    {
+        if (!UISetting.Instance.SINGMASK_SYSTEM)
+        {
+            return;
+        }
+
+        mUIMask.alpha = isVisible ? 1 : 0;
     }
 
     #endregion

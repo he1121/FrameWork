@@ -75,6 +75,7 @@ public class UIModule
             mAllWindowDisc.Add(wndName, windowBase);
             mAllWindowList.Add(windowBase);
             mAllVisibleWindowList.Add(windowBase);
+            SetWindowMaskVisible();
             return windowBase;
         }
     
@@ -92,6 +93,7 @@ public class UIModule
                 mAllVisibleWindowList.Add(window);
                 window.transform.SetAsLastSibling();
                 window.SetVisible(true);
+                SetWindowMaskVisible();
                 window.OnShow();
             }
             return window;
@@ -144,6 +146,7 @@ public class UIModule
         {
             mAllVisibleWindowList.Remove(window);
             window.SetVisible(false);
+            SetWindowMaskVisible();
             window.OnHide();
         }
     }
@@ -174,6 +177,7 @@ public class UIModule
                 mAllVisibleWindowList.Remove(window);
                 
                 window.SetVisible(false);
+                SetWindowMaskVisible();
                 window.OnHide();
                 window.OnDestroy();
                 GameObject.Destroy(window.gameobject.gameObject);
@@ -200,11 +204,61 @@ public class UIModule
         }
     }
 
+    private void SetWindowMaskVisible()
+    {
+        if (!UISetting.Instance.SINGMASK_SYSTEM)
+        {
+            return;
+        }
+        
+        //1.关闭所有窗口的mask 设置为不可见
+        //2.从所有可见窗口中找到层级最大的窗口设置为可见
+        
+        WindowBase maxOrderWindowBase = null; //最大渲染层级的窗口
+        int maxOrder = 0; // 最大渲染层级
+        int maxIndex = 0; //最大排序下标 在相同父节点下的排序下标
+
+        for (int i = 0; i < mAllVisibleWindowList.Count; i++)
+        {
+            WindowBase window = mAllWindowList[i];
+            if (window != null && window.gameobject != null)
+            {
+                window.SetMaskVisible(false);
+
+                var renderOrder = window.Canvas.renderOrder;
+                var curIndex = window.transform.GetSiblingIndex();
+                if (maxOrderWindowBase == null)
+                {
+                    maxOrderWindowBase = window;
+                    maxOrder = renderOrder;
+                    maxIndex = curIndex;
+                }
+                else
+                {
+                    if (maxOrder < renderOrder)
+                    {
+                        maxOrderWindowBase = window;
+                        maxOrder = renderOrder;
+                    }
+                    else if (maxOrder == renderOrder && maxIndex < curIndex)
+                    {
+                        maxOrderWindowBase = window;
+                        maxIndex = curIndex;
+                    }
+                }
+            }
+        }
+
+        if (maxOrderWindowBase != null)
+        {
+            maxOrderWindowBase.SetMaskVisible(true);
+        }
+    }
+
     public GameObject TempLoadWindow(string wndName)
     {
-        GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Window/" + wndName));
+        GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Window/" + wndName), mUIRoot);
         obj.name = wndName;
-        obj.transform.SetParent(mUIRoot);
         obj.transform.localScale = Vector3.one;
         obj.transform.position = Vector3.zero;
         obj.transform.rotation = Quaternion.identity;
