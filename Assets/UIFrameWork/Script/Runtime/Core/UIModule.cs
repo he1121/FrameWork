@@ -225,7 +225,7 @@ public class UIModule
             {
                 window.SetMaskVisible(false);
 
-                var renderOrder = window.Canvas.renderOrder;
+                var renderOrder = window.Canvas.sortingOrder;
                 var curIndex = window.transform.GetSiblingIndex();
                 if (maxOrderWindowBase == null)
                 {
