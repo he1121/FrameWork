@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GeneratorConfig
 {
-    public static string FindComponentGeneratorPath = Application.dataPath + "UIFrameWork/Scripts/FindComponent";
+    public static string FindComponentGeneratorPath = Application.dataPath + "/UIFrameWork/Scripts/FindComponent";
 }
