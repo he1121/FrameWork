@@ -55,6 +55,10 @@ public class WindowBase : WindowBehaviour
         mAllInputFieldList.Clear();
     }
 
+    public void HideWindow()
+    {
+        UIModule.Instance.HideWindow(Name);
+    }
     public override void SetVisible(bool isVisible)
     {
         base.SetVisible(isVisible);

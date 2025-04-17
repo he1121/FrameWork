@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
@@ -31,6 +32,11 @@ public class GeneratorFindComponentTool:Editor
         }
         
         PresWindowNodeData(obj.transform, obj.name);
+        
+        //储存字段名称
+        string dataListJson = JsonConvert.SerializeObject(objDataList);
+        PlayerPrefs.SetString(GeneratorConfig.OBJDATALIST_KEY, dataListJson);
+        
         string script = CreateCS(obj.name);
         string scriptPath = GeneratorConfig.FindComponentGeneratorPath + "/" + obj.name + "UIComponent.cs";
         if (File.Exists(scriptPath))
@@ -107,6 +113,7 @@ public class GeneratorFindComponentTool:Editor
         sb.AppendLine(" *Title: UI自动化组件查找代码生成工具");
         sb.AppendLine(" *Author: hed");
         sb.AppendLine(" *Date:"+System.DateTime.Now);
+        sb.AppendLine(" *Description:变量需要以[Text]中括号加组件类型的格式声明，然后右键点击窗口物体-一键生成UI组件查找脚本即可");
         sb.AppendLine(" *注意：以下文件为自动生成，任何手动修改都会被下次生成覆盖，手动修改后尽量避免再次自动生成！");
         sb.AppendLine("-----------------------------------*/");
         sb.AppendLine("using UnityEngine;");
@@ -127,7 +134,7 @@ public class GeneratorFindComponentTool:Editor
         //根据字段数据列表声明字段
         foreach (var item in objDataList)
         {
-            sb.AppendLine("\t\t" + "public " + item.fieldType + " " + item.fieldName + item.fieldType + ";\n");
+            sb.AppendLine("\t\t" + "public " + item.fieldType + " " + item.fieldType + item.fieldName + ";\n");
         }
         
         //声明初始化组件接口
@@ -140,15 +147,15 @@ public class GeneratorFindComponentTool:Editor
             string relFieldName = data.fieldType + data.fieldName;
             if (string.Equals("GameObject", data.fieldType))
             {
-                sb.AppendLine($"\t\t\t {relFieldName} = ({data.fieldType})target.transform.Find(\"{item.Value}\").gameObject;");
+                sb.AppendLine($"\t\t\t {relFieldName} = target.transform.Find(\"{item.Value}\").gameObject;");
             }
             else if (string.Equals("Transform", data.fieldType))
             {
-                sb.AppendLine($"\t\t\t {relFieldName} = ({data.fieldType})target.transform.Find(\"{item.Value}\").transform;");
+                sb.AppendLine($"\t\t\t {relFieldName} = target.transform.Find(\"{item.Value}\").transform;");
             }
             else
             {
-                sb.AppendLine($"\t\t\t {relFieldName} = ({data.fieldType})target.transform.GetComponent<{data.fieldType}>();");
+                sb.AppendLine($"\t\t\t {relFieldName} = target.transform.Find(\"{item.Value}\").GetComponent<{data.fieldType}>();");
             }
         }
 
@@ -167,18 +174,18 @@ public class GeneratorFindComponentTool:Editor
             {
                 suffix = "Click";
                 sb.AppendLine(
-                    $"\t\t\t  target.AddButtonClickListener({methodName}{type},mWindow.On{methodName}Button{suffix});");
+                    $"\t\t\t  target.AddButtonClickListener({type}{methodName},mWindow.On{methodName}Button{suffix});");
             }
             if (type.Contains("InputField"))
             {
                 sb.AppendLine(
-                    $"\t\t\t  target.AddInputFieldClickListener({methodName}{type},mWindow.On{methodName}InputFieldChange, mWindow.On{methodName}InputFieldEnd);");
+                    $"\t\t\t  target.AddInputFieldClickListener({type}{methodName},mWindow.On{methodName}InputChange, mWindow.On{methodName}InputEnd);");
             }
             if (type.Contains("Toggle"))
             {
                 suffix = "Change";
                 sb.AppendLine(
-                    $"\t\t\t  target.AddToggleClickListener({methodName}{type},mWindow.On{methodName}Toggle{suffix});");
+                    $"\t\t\t  target.AddToggleClickListener({type}{methodName},mWindow.On{methodName}Toggle{suffix});");
             }
         }
 
@@ -205,10 +212,5 @@ public class GeneratorFindComponentTool:Editor
         return null;
     }
     
-    public class EditorObjectData
-    {
-        public int instanceID;
-        public string fieldName;
-        public string fieldType;
-    }
+
 }
