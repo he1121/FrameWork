@@ -23,22 +23,8 @@ public class UIMain : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            UIModule.Instance.PopUpWindow<AccountWindow>();
+            UIModule.Instance.PopUpWindow<PassWindow>();
         } 
         
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            UIModule.Instance.PopUpWindow<SignupWindow>();
-        } 
-        
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            UIModule.Instance.HideWindow<AccountWindow>();
-        } 
-        
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            UIModule.Instance.HideWindow<SignupWindow>();
-        } 
     }
 }
