@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,13 @@ public abstract class WindowBehaviour
     public string Name{ get; set; }
     
     public bool Visible { get; set; }
+    
+    /// <summary>
+    /// 是否是通过堆栈系统弹出的弹窗
+    /// </summary>
+    public bool IsPopStack { get; set; }
+    
+    public Action<WindowBase> PopStackListener { get; set; }
     
     public virtual void OnAwake(){}//只在物体创建时执行一次
     

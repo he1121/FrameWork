@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,7 +12,10 @@ public class WindowBase : WindowBehaviour
     private List<InputField> mAllInputFieldList = new List<InputField>(); //所有输入框列表
 
     private CanvasGroup mUIMask;
+    private CanvasGroup mCanvasGroup;
     protected Transform mUIContent;
+
+    protected bool mDisibleAnim = false; // 是否禁用动画
 
     /// <summary>
     /// 初始化基类组件
@@ -20,7 +24,41 @@ public class WindowBase : WindowBehaviour
     {
         mUIMask = transform.Find("UIMask").GetComponent<CanvasGroup>();
         mUIContent = transform.Find("UIContent").transform;
+
+        mCanvasGroup = transform.GetComponent<CanvasGroup>();
     }
+    
+    #region 动画管理
+
+    public void ShowAnimation()
+    {
+        if(mDisibleAnim) return;
+        // if(Canvas.sortingOrder < 100) return; //基础界面不需要缩放动画
+        
+        //遮罩
+        mUIMask.alpha = 0;
+        mUIMask.DOFade(1, 0.2f);
+        //缩放动画
+        mUIContent.localScale = Vector3.one * 0.8f;
+        mUIContent.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
+    }
+
+    public void HideAnimation()
+    {
+        if (mDisibleAnim)
+        {
+            UIModule.Instance.HideWindow(Name);
+            return;
+        }
+
+        // if(Canvas.sortingOrder < 100) return; //基础界面不需要缩放动画
+        mUIContent.DOScale(0, 0.3f).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            UIModule.Instance.HideWindow(Name);
+        });
+    }
+    #endregion
+    
     #region 生命周期函数
     public override void OnAwake()
     {
@@ -31,6 +69,7 @@ public class WindowBase : WindowBehaviour
     public override void OnShow()
     {
         base.OnShow();
+        ShowAnimation();
     }
 
     public override void OnUpdate()
@@ -57,12 +96,14 @@ public class WindowBase : WindowBehaviour
 
     public void HideWindow()
     {
-        UIModule.Instance.HideWindow(Name);
+        // UIModule.Instance.HideWindow(Name);
+        HideAnimation();
     }
     public override void SetVisible(bool isVisible)
     {
-        base.SetVisible(isVisible);
-        gameobject.SetActive(isVisible); //临时代码
+        // gameobject.SetActive(isVisible); //临时代码
+        mCanvasGroup.alpha = isVisible ? 1 : 0;
+        mCanvasGroup.blocksRaycasts = isVisible;
         Visible = isVisible;
     }
 
@@ -77,7 +118,7 @@ public class WindowBase : WindowBehaviour
     }
 
     #endregion
-
+    
     #region 事件管理
 
     public void AddButtonClickListener(Button btn, UnityAction action)

@@ -6,13 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="e14aaf9c-e076-43d7-9117-dbe1648e5e95" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UIFrameWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UIFrameWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/AccountWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/AccountWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/LoginWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/LoginWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/PassWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/PassWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/SignupWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/SignupWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow3.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/EditorObjectData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/EditorObjectData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorWindowTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorWindowTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/PassWindowUIComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/PassWindowUIComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Core/UIModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Core/UIModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/LoginWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/LoginWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/SignupWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/SignupWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/TempWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/TempWindow.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/UIMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/UIMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +59,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1dc780fbfc9f4906a04a6a583eaa2dea116400/58/30529daf/PlayerPrefs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1dc780fbfc9f4906a04a6a583eaa2dea116400/98/34817480/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1dc780fbfc9f4906a04a6a583eaa2dea116400/b6/5f0eca2d/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a03abbda5d94df5a1b3bbfe91d14edd21000/a9/e74d0884/Ease.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a03abbda5d94df5a1b3bbfe91d14edd21000/c5/ddbf023b/ShortcutExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bc02da0887447219f0c133dfc2ee15e789400/3e/3c1dde6e/EditorPrefs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bc02da0887447219f0c133dfc2ee15e789400/ad/9987e773/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c2967a135e648bdb993c5397a44991b573620/74/c3f04f26/FieldInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8ff8619937647dc83378d89f3075322a8a00/96/b63e2e01/JsonConvert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Resources/WindowConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorBindComponentTool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorWindowTool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/UIWindowEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Agent/UGUIAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/TMP_ListPool.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -38,20 +83,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true",
-    "附加到 Unity 编辑器.附加到 Unity 编辑器.executor": "Debug"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2019.4.18f1\Editor\Unity.exe" />
@@ -69,15 +114,13 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18004">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18004" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -108,6 +151,12 @@
       <updated>1744814937282</updated>
       <workItem from="1744814937283" duration="39000" />
       <workItem from="1744892464983" duration="7771000" />
+      <workItem from="1745221961810" duration="6271000" />
+      <workItem from="1747727995756" duration="9012000" />
+      <workItem from="1747743626120" duration="8396000" />
+      <workItem from="1747984918835" duration="10582000" />
+      <workItem from="1749738578445" duration="4796000" />
+      <workItem from="1749824008430" duration="2855000" />
     </task>
     <servers />
   </component>
@@ -123,24 +172,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs</url>
-          <line>46</line>
-          <properties documentPath="D:\UnityProject\UIFrameWork\Assets\UIFrameWork\Scripts\Window\PassWindow.cs" containingFunctionPresentation="方法 'OnCloseButtonClick'">
-            <startOffsets>
-              <option value="904" />
-            </startOffsets>
-            <endOffsets>
-              <option value="917" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

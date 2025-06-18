@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class UIMain : MonoBehaviour
@@ -12,19 +13,15 @@ public class UIMain : MonoBehaviour
 
     void Start()
     {
-        LoginWindow loginWindow = UIModule.Instance.PopUpWindow<LoginWindow>();
-        loginWindow.Test();
-
-        LoginWindow lw = UIModule.Instance.GetWindow<LoginWindow>();
-        lw.Test2();
+        UIModule.Instance.PopUpWindow<LoginWindow>();
+        UIModule.Instance.PreLoadWindow<PassWindow>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            UIModule.Instance.PopUpWindow<PassWindow>();
-        } 
-        
+            UIModule.Instance.PushAndPopStackWindow<SignupWindow>();
+        }
     }
 }
