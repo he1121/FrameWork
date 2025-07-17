@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14aaf9c-e076-43d7-9117-dbe1648e5e95" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UIFrameWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UIFrameWork/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/AccountWindow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/AccountWindow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/LoginWindow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/LoginWindow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/PassWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/PassWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/SignupWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/SignupWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Resources/Window/TempWindow3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/EditorObjectData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/EditorObjectData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorFindComponentTool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorWindowTool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Editor/GeneratorWindowTool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/PassWindowUIComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/PassWindowUIComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/FindComponent/TempWindowUIComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Base/WindowBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Core/UIModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Runtime/Core/UIModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/LoginWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/LoginWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/PassWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/SignupWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/SignupWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/TempWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/Scripts/Window/TempWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIFrameWork/UIMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIFrameWork/UIMain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="e14aaf9c-e076-43d7-9117-dbe1648e5e95" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +115,7 @@
       <workItem from="1747984918835" duration="10582000" />
       <workItem from="1749738578445" duration="4796000" />
       <workItem from="1749824008430" duration="2855000" />
+      <workItem from="1752554593877" duration="187000" />
     </task>
     <servers />
   </component>
